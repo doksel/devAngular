@@ -1,7 +1,8 @@
-<div class="card flex-row">
-    <img class="col-2" src="favicon.ico" alt="Card image cap">
-    <div class="col-10 card-body">
-        <h5 class="card-title">Название карточки</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="card flex-row p-3 my-3">
+    <img class="col-lg-2 col-md-2 col-sm-2" src="favicon.ico" alt="Card image cap">
+    <div class="col-lg-10 col-md-12 col-sm-12 card-body">
+        <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
+        <p>{{ user.age }}</p>
+        <p class="card-text">{{ user.text }}</p>
     </div>
 </div>

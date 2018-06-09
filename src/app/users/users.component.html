@@ -1,0 +1,13 @@
+<main class="container mx-auto">
+  <div class="card flex-row p-3 my-3" *ngFor="let user of users" (click)="onSelect(user)">
+    <img class="col-lg-2 col-md-2 col-sm-2" src="favicon.ico" alt="Card image cap">
+    <div class="card-body col-lg-10 col-md-12 col-sm-12">
+      <div class="row container justify-content-between">
+        <h5 class="card-title">{{ user.firstName | uppercase }} {{ user.lastName | uppercase }}</h5>
+        <p>{{ user.age }}</p>
+      </div>
+        <p class="card-text">{{ user.text }}</p>
+    </div>
+  </div>
+  <app-about-user [user]="selectedUser"></app-about-user>
+</main>

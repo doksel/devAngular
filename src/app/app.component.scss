@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800|Raleway:300,400,600,800&subset=cyrillic');
-@import '_button';
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -8,17 +7,4 @@ body{
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Raleway', sans-serif;
-}
-
-header{
-    a{
-        color: gray;
-        img{
-            height: 30px; width: 30px;
-            margin-right: 10px;
-        }
-        h3{
-            font-weight: 800;
-        }
-    }
 }
