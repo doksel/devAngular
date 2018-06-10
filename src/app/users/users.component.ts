@@ -6,21 +6,15 @@ import { UserService } from '../user.service';
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
-  providers: [UserService]
 })
 export class UsersComponent implements OnInit {
 
   users: User[];
-  selectedUser: User;
-
+  // selectedUser: User;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.getUsers();
-  }
-
-  onSelect(user: User): void {
-    this.selectedUser = user;
   }
 
   getUsers(): void {
@@ -28,4 +22,7 @@ export class UsersComponent implements OnInit {
     .subscribe(users => this.users = users) ;
   }
 
+  // onSelect(user: User): void {
+  //   this.selectedUser = user;
+  // }
 }

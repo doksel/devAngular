@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800|Raleway:300,400,600,800&subset=cyrillic');
+@import '_button';
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background: rgb(214, 214, 214);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+}

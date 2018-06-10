@@ -1,5 +1,4 @@
-<main class="container mx-auto">
-  <div class="card flex-row p-3 my-3" *ngFor="let user of users" (click)="onSelect(user)">
+  <div class="card flex-row p-3 my-3" *ngFor="let user of users" routerLink="/about-user/{{user.id}}">
     <img class="col-lg-2 col-md-2 col-sm-2" src="favicon.ico" alt="Card image cap">
     <div class="card-body col-lg-10 col-md-12 col-sm-12">
       <div class="row container justify-content-between">
@@ -9,5 +8,6 @@
         <p class="card-text">{{ user.text }}</p>
     </div>
   </div>
-  <app-about-user [user]="selectedUser"></app-about-user>
-</main>
+  <div class="buttons row justify-content-center">
+      <button class="btn m-3">Load more</button>
+  </div>  
