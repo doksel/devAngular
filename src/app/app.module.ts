@@ -6,27 +6,29 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
-import { AlertModule } from 'ngx-bootstrap';
 import { AboutUserComponent } from './about-user/about-user.component';
-import { SortListUsersComponent } from './sort-list-users/sort-list-users.component';
+import { SortUsersDateComponent } from './sort-users-date/sort-users-date.component';
+import { SortUsersNameComponent } from './sort-users-name/sort-users-name.component';
+import { SearchUsersComponent } from './search-users/search-users.component';
 import { UsersComponent } from './users/users.component';
-import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchNameUserPipe } from './searchNameUser.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutUserComponent,
-    SortListUsersComponent,
+    SortUsersDateComponent,
+    SortUsersNameComponent,
+    SearchUsersComponent,
     UsersComponent,
-    MessagesComponent
+    SearchNameUserPipe
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    AlertModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

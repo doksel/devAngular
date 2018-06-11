@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SortListUsersComponent } from './sort-list-users.component';
+import { SortUsersDateComponent } from './sort-users-date.component';
 
-describe('SortListUsersComponent', () => {
-  let component: SortListUsersComponent;
-  let fixture: ComponentFixture<SortListUsersComponent>;
+describe('SortUsersDateComponent', () => {
+  let component: SortUsersDateComponent;
+  let fixture: ComponentFixture<SortUsersDateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SortListUsersComponent ]
+      declarations: [ SortUsersDateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SortListUsersComponent);
+    fixture = TestBed.createComponent(SortUsersDateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

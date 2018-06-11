@@ -1,10 +1,18 @@
-<div *ngIf="user">
-  <h2>{{ user.firstName | uppercase }} Details</h2>
-  <div><span>lastName: </span>{{ user.lastName }}</div>
-  <div>
-    <label>firstName:
-      <input [(ngModel)]="user.firstName" placeholder="firstName">
-    </label>
+<div *ngIf="user" class="aboutUser bg-white p-5 mx-auto">
+  <div class="row container pb-5">
+    <img src="favicon.ico" alt="image" class="col">
+    <div class="about col">
+      <h2>{{ user.firstName | uppercase }}</h2>
+      <h2>{{ user.lastName | uppercase }}</h2>
+      <p>{{ user.age }}</p> <br><br> 
+      <a href="#">{{ user.link }}</a>    
+    </div>
+    <div class="container col-12">
+      <p>{{ user.text }}</p>
+    </div>
+    
   </div>
-  <button (click)="goBack()">back</button>
+  <div class="buttons row justify-content-center">
+      <button class="btn m-3" (click)="goBack()">back</button>
+  </div>  
 </div>

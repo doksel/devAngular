@@ -1,0 +1,14 @@
+<div class="container">
+    <input type="text" class="form-control col-4 mx-auto" id="InputText" [(ngModel)]="searchName" placeholder="Search name">
+</div>
+  
+<div class="card flex-row p-3 my-3" *ngFor="let user of users | searchNameUser:searchName" routerLink="/about-user/{{user.id}}">
+  <img class="col-3" src="favicon.ico" alt="Card image cap">
+  <div class="card-body col-lg-9 col-md-12 col-sm-12">
+    <div class="row container justify-content-between">
+      <h5 class="card-title">{{ user.firstName | uppercase }} {{ user.lastName | uppercase }}</h5>
+      <p>{{ user.age }}</p>
+    </div>
+      <p class="card-text">{{ user.text }}</p>
+  </div>
+</div>

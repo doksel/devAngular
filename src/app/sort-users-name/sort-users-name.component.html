@@ -1,10 +1,10 @@
 <div class="buttons row justify-content-end">
-  <button class="btn m-3">Date ASC</button>
-  <button class="btn m-3">Date DESC</button>
+  <button class="btn m-3">First name ASC</button>
+  <button class="btn m-3">First name DESC</button>
 </div>
 <div class="card flex-row p-3 my-3" *ngFor="let user of users" routerLink="/about-user/{{user.id}}">
-  <img class="col-lg-2 col-md-2 col-sm-2" src="favicon.ico" alt="Card image cap">
-  <div class="card-body col-lg-10 col-md-12 col-sm-12">
+  <img class="col-3" src="favicon.ico" alt="Card image cap">
+  <div class="card-body col-lg-9 col-md-12 col-sm-12">
     <div class="row container justify-content-between">
       <h5 class="card-title">{{ user.firstName | uppercase }} {{ user.lastName | uppercase }}</h5>
       <p>{{ user.age }}</p>
@@ -13,5 +13,5 @@
   </div>
 </div>
 <div class="buttons row justify-content-center">
-    <button class="btn m-3">Load more</button>
+    <button class="btn m-3" (click)="loadMore()">Load more</button>
 </div>  

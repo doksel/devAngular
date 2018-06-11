@@ -3,13 +3,13 @@ import { User } from '../user';
 import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+  selector: 'app-sort-users-date',
+  templateUrl: './sort-users-date.component.html',
+  styleUrls: ['./sort-users-date.component.scss'],
 })
-export class UsersComponent implements OnInit {
+export class SortUsersDateComponent implements OnInit {
 
-  users: User[];
+  users: User[] = [];
   count = 3;
   constructor(private userService: UserService) { }
 

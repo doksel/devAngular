@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MassegesComponent } from './masseges.component';
+import { SortUsersNameComponent } from './sort-users-name.component';
 
-describe('MassegesComponent', () => {
-  let component: MassegesComponent;
-  let fixture: ComponentFixture<MassegesComponent>;
+describe('SortUsersNameComponent', () => {
+  let component: SortUsersNameComponent;
+  let fixture: ComponentFixture<SortUsersNameComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MassegesComponent ]
+      declarations: [ SortUsersNameComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MassegesComponent);
+    fixture = TestBed.createComponent(SortUsersNameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

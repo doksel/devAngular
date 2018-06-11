@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { MessagesService } from './messages.service';
 
 import { User } from './user';
 import { USERS } from './mock-users';
@@ -10,14 +9,12 @@ import { USERS } from './mock-users';
 })
 export class UserService {
 
-  constructor(private messagesService: MessagesService) { }
+  constructor() {}
 
   getUsers(): Observable<User[]> {
-    // this.messagesService.add('UserService: fetched users');
     return of(USERS);
   }
   getUser(id: number): Observable<User> {
-    // this.messagesService.add(`UserService: fetched users id=${id}`);
     return of(USERS.find(user => user.id === id));
   }
 }
