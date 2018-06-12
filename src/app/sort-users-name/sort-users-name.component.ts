@@ -20,11 +20,28 @@ export class SortUsersNameComponent implements OnInit {
   getUsers(count): void {
     this.userService.getUsers()
     .subscribe(users => this.users = users.slice(0, count));
-    this.count++;
   }
 
   loadMore(): void {
+    this.count++;
     this.getUsers(this.count);
+  }
+
+  sortByNameASC(): void {
+    this.userService.getUsers()
+    .subscribe(users => this.users = users.slice(0, this.count)
+      .sort((a, b) => a.firstName.toLowerCase() !== b.firstName.toLowerCase() ?
+        a.firstName.toLowerCase() < b.firstName.toLowerCase() ? -1 : 1 : 0)
+  );
+  }
+
+  sortByNameDESC(): void {
+    this.userService.getUsers()
+    .subscribe(users => this.users = users.slice(0, this.count)
+      .sort((a, b) => a.firstName.toLowerCase() !== b.firstName.toLowerCase() ?
+        a.firstName.toLowerCase() < b.firstName.toLowerCase() ? -1 : 1 : 0)
+      .reverse()
+    );
   }
 
 }

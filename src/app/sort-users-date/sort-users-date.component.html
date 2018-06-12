@@ -1,6 +1,6 @@
 <div class="buttons row justify-content-end">
-  <button class="btn m-3">Date ASC</button>
-  <button class="btn m-3">Date DESC</button>
+  <button class="btn m-3" (click)="sortByDateASC()">Date ASC</button>
+  <button class="btn m-3" (click)="sortByDateDESC()">Date DESC</button>
 </div>
 <div class="card flex-row p-3 my-3" *ngFor="let user of users" routerLink="/about-user/{{user.id}}">
   <img class="col-3" src="favicon.ico" alt="Card image cap">
