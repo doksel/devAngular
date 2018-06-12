@@ -39,8 +39,8 @@ export class SortUsersNameComponent implements OnInit {
     this.userService.getUsers()
     .subscribe(users => this.users = _.slice(users,0, this.count)
       .sort((a, b) => a.firstName.toLowerCase() !== b.firstName.toLowerCase() ?
-        a.firstName.toLowerCase() < b.firstName.toLowerCase() ? -1 : 1 : 0))
-    );
+        a.firstName.toLowerCase() < b.firstName.toLowerCase() ? -1 : 1 : 0)
+    )
   }
 
   // -------- сортировка без lodash ---------
