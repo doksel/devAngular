@@ -17,29 +17,54 @@ export class SortUsersDateComponent implements OnInit {
     this.getUsers(this.count);
   }
 
+  // -------- получаем список с lodash ---------
   getUsers(count): void {
     this.userService.getUsers()
-    .subscribe(users => this.users = users.slice(0, count));
+    .subscribe(users => this.users = _.slice(users,0, count))
   }
+
+  // -------- получаем список без lodash ---------
+  // getUsers(count): void {
+  //   this.userService.getUsers()
+  //   .subscribe(users => this.users = users.slice(0, count));
+  // }
 
   loadMore(): void {
     this.count++;
     this.getUsers(this.count);
   }
 
+  // -------- сортировка с lodash ---------
   sortByDateASC(){
     this.userService.getUsers()
-    .subscribe(users => this.users = users.slice(0, this.count)
+    .subscribe(users => this.users = _.slice(users,0, this.count)
       .sort(function(a, b){return b.date.getTime() - a.date.getTime()})
+    );
+  }
+  
+  // -------- сортировка без lodash ---------
+  // sortByDateASC(){
+  //   this.userService.getUsers()
+  //   .subscribe(users => this.users = users.slice(0, this.count)
+  //     .sort(function(a, b){return b.date.getTime() - a.date.getTime()})
+  //   );
+  // }
+
+  // -------- сортировка с lodash ---------
+  sortByDateDESC(){
+    this.userService.getUsers()
+    .subscribe(users => this.users = _.reverse(_.slice(users,0, this.count)
+      .sort(function(a, b){return b.date.getTime() - a.date.getTime()}))
     );
   }
 
-  sortByDateDESC(){
-    this.userService.getUsers()
-    .subscribe(users => this.users = users.slice(0, this.count)
-      .sort(function(a, b){return b.date.getTime() - a.date.getTime()})
-      .reverse()
-    );
-  }
+  // -------- сортировка без lodash ---------
+  // sortByDateDESC(){
+  //   this.userService.getUsers()
+  //   .subscribe(users => this.users = users.slice(0, this.count)
+  //     .sort(function(a, b){return b.date.getTime() - a.date.getTime()})
+  //     .reverse()
+  //   );
+  // }
 
 }

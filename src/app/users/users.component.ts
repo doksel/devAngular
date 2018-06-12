@@ -17,13 +17,20 @@ export class UsersComponent implements OnInit {
     this.getUsers(this.count);
   }
 
+  // -------- получаем список с lodash ---------
   getUsers(count): void {
     this.userService.getUsers()
-    .subscribe(users => this.users = users.slice(0, count));
-    this.count++;
+    .subscribe(users => this.users = _.slice(users,0, count))
   }
 
+  // -------- получаем список без lodash ---------
+  // getUsers(count): void {
+  //   this.userService.getUsers()
+  //   .subscribe(users => this.users = users.slice(0, count));
+  // }
+
   loadMore(): void {
+    this.count++;
     this.getUsers(this.count);
   }
 

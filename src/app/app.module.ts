@@ -13,6 +13,7 @@ import { SearchUsersComponent } from './search-users/search-users.component';
 import { UsersComponent } from './users/users.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchNameUserPipe } from './searchNameUser.pipe';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { SearchNameUserPipe } from './searchNameUser.pipe';
     SortUsersNameComponent,
     SearchUsersComponent,
     UsersComponent,
-    SearchNameUserPipe
+    UserComponent,
+    SearchNameUserPipe,
+    UserComponent
   ],
   imports: [
     BrowserModule,
